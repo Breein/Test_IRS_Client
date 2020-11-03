@@ -1,0 +1,97 @@
+.chat{
+  display: flex;
+  flex-flow: column nowrap;
+  width: 90vw;
+  height: 90vh;
+  background-color: #ebf6ff;
+}
+
+header{
+  display: flex;
+  padding: 15px;
+  background-color: #1e66d0;
+  border-radius: 20px 20px 0 0 ;
+  color: white;
+  font-weight: bolder;
+  font-size: 20px;
+  justify-content: center;
+  text-shadow: -1px -1px black;
+}
+
+.messages{
+  display: flex;
+  flex-grow: 1;
+  overflow-y: scroll;
+  flex-flow: column nowrap;
+}
+
+.wrapper{
+  background-color: #cce1ff;
+}
+
+.counter{
+  display: flex;
+  padding: 10px;
+}
+
+form{
+  display: flex;
+  padding: 10px;
+}
+
+.message-input{
+  flex-grow: 1;
+  outline: none;
+  border: none;
+  height: 28px;
+  padding-left: 5px;
+  font-size: 18px;
+  margin-right: 7px;
+}
+
+.user-message{
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 5px 10px;
+  padding: 9px 10px;
+  background-color: #d5dee8;
+  border-radius: 15px;
+  box-shadow: 2px 2px 3px #e8e8e8;
+}
+
+.avatar{
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  background-color: white;
+  border-radius: 100%;
+  flex-shrink: 0;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.user-message .message-wrap{
+  display: flex;
+  flex-flow: column nowrap;
+  flex-grow: 1;
+  align-items: flex-start;
+}
+
+.name{
+  display: flex;
+  padding: 3px 15px;
+  background-color: #a8c6e3;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.text-message{
+  display: flex;
+  flex-grow: 4;
+  padding: 10px 15px;
+  background-color: #fff;
+  border-radius: 11px;
+  font-size: 20px;
+  align-self: normal;
+}
