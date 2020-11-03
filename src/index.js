@@ -140,7 +140,7 @@ class Chat extends React.Component{
   }
 
   _playSound(){
-    if(this._sound === null) this._sound = new Audio('sms.mp3');
+    if(this._sound === null) this._sound = new Audio('https://raw.githubusercontent.com/Breein/Test_IRS_Client/master/src/sms.mp3');
     this._sound.play();
   }
 
