@@ -114,6 +114,7 @@ class Chat extends React.Component{
 
     this._user = {};
     this._socket = null;
+    this._sound = null;
 
     this.state = {
       users: 0,
@@ -138,6 +139,11 @@ class Chat extends React.Component{
     });
   }
 
+  _playSound(){
+    if(this._sound === null) this._sound = new Audio('sms.mp3');
+    this._sound.play();
+  }
+
   _socketsHandlers(){
     //this._socket = io('http://localhost:5000/?user=' + this._user.id);
     this._socket = io('https://chat-test-irs-server.herokuapp.com/?user=' + this._user.id);
@@ -150,6 +156,8 @@ class Chat extends React.Component{
       this.setState({
         messages: this._update(response)
       });
+
+      this._playSound();
     });
 
     this._socket.on('counter change', (count) => {
